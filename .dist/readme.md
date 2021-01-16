@@ -1,16 +1,36 @@
 
-         My Test title  
-         ========
-         MIT
-         Created by Malachi
-         =========================================================================================
-         Description
-         ============
-         This is an effort to test this new document generator who knows if it works though?
-        
-         Installation Instructions 
-         ==========================
-         you can install by typing npm install inquirer
+         # Reamme Generator                         ![MIT Badge](./assets/License-MIT-blue)                       
 
+         ## Description
+
+         This is a application that builds a readme for a new project. It takes inputs and saves them, and sets them up in an organized readme.
+
+         ##Table of Contents
+         * [Installation](#installation)
+         * [Usage](#usage)
+         * [Credits](#credits)
+         * [License](#license)
+         
+         ##installation instructions 
+
+         You will need to node installed, and you would need to install inquirer. To install inquirer. Navigate through terminal to your base directory and enter "npm install inquirer"
+
+         ## Usage
+
+         To use this app you will need to access it through terminal. You will need to answer a few questions, and then the new readme should appear in the .dist directory of this application.
+
+         ## Features
+
+         ## Testing 
+
+         ## Credits
+
+         Malachi Alusa
+
+         ## License:
+
+         For more information on the Licence on this Project visit https://choosealicense.com/licenses/mit/
+        
+        
       
       
