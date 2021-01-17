@@ -202,41 +202,37 @@ promptUser().then(answers =>{
     const createdocument = inputtitle => {
    
         return`
-         # ${title}                         ${licensebadge}                       
+# ${title}                         ${licensebadge}                       
 
-         ## Description
+## Description
 
-         ${description}
+${description}
 
-         ##Table of Contents
-         * [Installation](#installation)
-         * [Usage](#usage)
-         * [Credits](#credits)
-         * [License](#license)
+##Table of Contents
+* [Installation](#installation)
+* [Usage](#usage)
+* [Credits](#credits)
+* [License](#license)
          
-         ##installation instructions 
+##installation instructions 
 
-         ${installation}
+${installation}
 
-         ## Usage
+## Usage
 
-         ${usage}
+${usage}
 
-         ## Features
+## Features
 
-         ## Testing 
+## Testing 
 
-         ## Credits
+## Credits
 
-         ${contributors}
+${contributors}
 
-         ## License:
+## License:
 
-         For more information on the Licence on this Project visit ${licenseinfo}
-        
-        
-      
-      `};
+For more information on the Licence on this Project visit ${licenseinfo}`};
 
         var trythis = createdocument(items)
 
