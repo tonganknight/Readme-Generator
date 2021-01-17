@@ -103,7 +103,7 @@ const promptUser = () =>{
            type: 'checkbox',
            name: 'license',
            message: 'What kind of License would you like?',  
-           choices: ['MIT','Apache','Mozilla Public','BSD 3 clause', 'GPL']
+           choices: ['MIT','GPL 3.0','Apache','LGPL 2.1', 'BSD']
         },
         {
             type: 'confirm',
@@ -204,7 +204,11 @@ promptUser().then(answers =>{
          var licensebadge = "![MIT Badge](https://github.com/tonganknight/Readme-Generator/blob/master/assets/images/License-MIT-blue.svg)"
          var licenseinfo = "https://choosealicense.com/licenses/mit/"
      }
-     //if(license == "Apache")
+     if(license == "Apache"){
+        var licensebadge = "![Apache Badge](https://github.com/tonganknight/Readme-Generator/blob/master/assets/images/License-Apache%20-brightgreen.svg)"
+        var licenseinfo = "https://www.apache.org/licenses/"
+     }
+     
 
 
 
