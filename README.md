@@ -1,17 +1,17 @@
 
-# Readme Generator                         ![MIT Badge](./assets/License-MIT-blue)                       
+# Readme Generator                         ![MIT Badge](./assets/License-MIT-blue.svg)                       
 
 ## Description
 
 This is a application that builds a readme for a new project. It takes inputs and saves them, and sets them up in an organized readme.
 
-##Table of Contents
+## Table of Contents
 * [Installation](#installation)
 * [Usage](#usage)
 * [Credits](#credits)
 * [License](#license)
          
-##installation instructions 
+## installation 
 
 You will need to node installed, and you would need to install inquirer. To install inquirer. Navigate through terminal to your base directory and enter "npm install inquirer"
 
@@ -25,7 +25,7 @@ To use this app you will need to access it through terminal. You will need to an
 
 ## Credits
 
-Malachi Alusa
+Maalachi Alusa
 
 ## License:
 

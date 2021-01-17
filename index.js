@@ -187,7 +187,7 @@ promptUser().then(answers =>{
     var license = answers.license;
 
      if(license == "MIT"){
-         var licensebadge = "![MIT Badge](./assets/License-MIT-blue)"
+         var licensebadge = "![MIT Badge](./assets/License-MIT-blue.svg)"
          var licenseinfo = "https://choosealicense.com/licenses/mit/"
      }
      //if(license == "Apache")
@@ -208,13 +208,13 @@ promptUser().then(answers =>{
 
 ${description}
 
-##Table of Contents
+## Table of Contents
 * [Installation](#installation)
 * [Usage](#usage)
 * [Credits](#credits)
 * [License](#license)
          
-##installation instructions 
+## installation 
 
 ${installation}
 
