@@ -121,13 +121,13 @@ const promptUser = () =>{
         {
             type: 'input',
             name: 'gitUsername',
-            message: 'please enter your Git Hub username.',
+            message: 'please enter your Git Hub username as a reference for questions',
             validate: userNameinput => 
             {
                 if(userNameinput){
                     return true;
                 }else{
-                    console.log ('Please enter your Git Hub Username.');
+                    console.log ('Please enter a Git Hub Username.');
                     return false;
                 }
             }   
@@ -169,21 +169,6 @@ const promptUser = () =>{
 
  };
 
-
-   
-   
-   
-   
-   /*.then(answers => {
-       const title = answers.title;
-       const description = answers.description;
-       console.log(answers.title);
-       console.log(answers.description);*/
-   //}) 
-
-
-
-
 promptUser().then(answers =>{
    
      const items ={title: answers.title, description: answers.description, 
@@ -208,7 +193,18 @@ promptUser().then(answers =>{
         var licensebadge = "![Apache Badge](https://github.com/tonganknight/Readme-Generator/blob/master/assets/images/License-Apache%20-brightgreen.svg)"
         var licenseinfo = "https://www.apache.org/licenses/"
      }
-     
+     if(license == "GPL 3.0"){
+        var licensebadge = "![GPL 3.0](https://github.com/tonganknight/Readme-Generator/blob/master/assets/images/License-GPL%203.svg)"
+        var licenseinfo = "https://choosealicense.com/licenses/gpl-3.0/"
+     }
+     if(license == "LGPL 2.1"){
+        var licensebadge = "![LGPL 3.0]https://github.com/tonganknight/Readme-Generator/blob/master/assets/images/License-LGPL%202.svg"
+        var licenseinfo = "https://choosealicense.com/licenses/lgpl-3.0/"
+     }
+     if(license == "BSD"){
+        var licenseinfo ="![BSD]https://github.com/tonganknight/Readme-Generator/blob/master/assets/images/License-BSD-orange.svg"
+        var licenseinfo = "https://whatis.techtarget.com/definition/BSD-licenses"
+     }
 
 
 
