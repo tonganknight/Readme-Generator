@@ -102,8 +102,21 @@ const promptUser = () =>{
         {
            type: 'checkbox',
            name: 'license',
-           message: 'What kind of Licence would you like?',  
+           message: 'What kind of License would you like?',  
            choices: ['MIT','Apache','Mozilla Public','BSD 3 clause', 'GPL']
+        },
+        {
+            type: 'confirm',
+            name: 'askfeatures',
+            message: 'Would you like to list some of the features your project has?',
+            default: false
+        },
+        {
+            type: 'input',
+            name: 'features',
+            message: 'Please add a list of features for your project',
+            when: ({ askfeatures }) => askfeatures
+
         },
         {
             type: 'input',
@@ -183,11 +196,12 @@ promptUser().then(answers =>{
     var installation = answers.installation;
     var usage = answers.usage;
     var contributors = answers.contributors;
+    var features =answers.features;
     var test = answers.test;
     var license = answers.license;
 
      if(license == "MIT"){
-         var licensebadge = "![MIT Badge](./assets/License-MIT-blue.svg)"
+         var licensebadge = "![MIT Badge](https://github.com/tonganknight/Readme-Generator/blob/master/assets/images/License-MIT-blue.svg)"
          var licenseinfo = "https://choosealicense.com/licenses/mit/"
      }
      //if(license == "Apache")
@@ -202,7 +216,7 @@ promptUser().then(answers =>{
     const createdocument = inputtitle => {
    
         return`
-# ${title}                         ${licensebadge}                       
+# ${title}   ${licensebadge}                       
 
 ## Description
 
@@ -224,7 +238,11 @@ ${usage}
 
 ## Features
 
+${features}
+
 ## Testing 
+
+${test}
 
 ## Credits
 
@@ -232,7 +250,14 @@ ${contributors}
 
 ## License:
 
-For more information on the Licence on this Project visit ${licenseinfo}`};
+For more information on the Licence on this Project visit ${licenseinfo}
+
+## Questions 
+
+If you have any questions about this project, or if you run into any issues please contact me at ${email}
+or you can also find me on GitHub.com my username is ${gitUsername} Please visit my profile page at ${gitProfile}
+
+`};
 
         var trythis = createdocument(items)
 
