@@ -102,7 +102,7 @@ const promptUser = () =>{
            type: 'checkbox',
            name: 'license',
            message: 'What kind of License would you like?',  
-           choices: ['MIT','GPL 3.0','Apache','LGPL 2.1', 'BSD']
+           choices: ['MIT','GPL 3.0','Apache','LGPL 2.1', 'BSD', 'ISC']
         },
         {
             type: 'confirm',
@@ -203,6 +203,9 @@ promptUser().then(answers =>{
      if(license == "BSD"){
         var licenseinfo ="![BSD]https://github.com/tonganknight/Readme-Generator/blob/master/assets/images/License-BSD-orange.svg"
         var licenseinfo = "https://whatis.techtarget.com/definition/BSD-licenses"
+     }
+     if(license == 'ISC'){
+         var licenseinfo ="![ISC]"
      }
 
     var gitUsername = answers.gitUsername;
