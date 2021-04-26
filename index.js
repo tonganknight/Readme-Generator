@@ -1,13 +1,12 @@
-// TODO: Include packages needed for this application
+//required
 const { create } = require('domain');
 const inquirer = require('inquirer');
 const { title } = require('process');
 const generatedocument = require('./utils/generateMarkdown')
-//const { title } = require('process');
 
 fs = require('fs');
 
-// TODO: Create an array of questions for user input
+//Questions to ask for input 
 
 const promptUser = () =>{
     return inquirer.prompt([
@@ -170,12 +169,10 @@ const promptUser = () =>{
  };
 
 promptUser().then(answers =>{
-   
+   //deconstructing string 
      const items ={title: answers.title, description: answers.description, 
      }
      const {title} = items
-
-   
   
     var description = answers.description;
     var installation = answers.installation;
@@ -184,6 +181,8 @@ promptUser().then(answers =>{
     var features =answers.features;
     var test = answers.test;
     var license = answers.license;
+
+    //If to change the kind of badge that is applied on the readme 
 
      if(license == "MIT"){
          var licensebadge = "![MIT Badge](https://github.com/tonganknight/Readme-Generator/blob/master/assets/images/License-MIT-blue.svg)"
@@ -206,12 +205,11 @@ promptUser().then(answers =>{
         var licenseinfo = "https://whatis.techtarget.com/definition/BSD-licenses"
      }
 
-
-
     var gitUsername = answers.gitUsername;
     var gitProfile= answers.gitProfile;
     var email =answers.email;
 
+// format of readme
 
     const createdocument = inputtitle => {
    
@@ -261,7 +259,7 @@ or you can also find me on GitHub.com my username is ${gitUsername} Please visit
 
         var trythis = createdocument(items)
 
-      //var stringthis = String(inputtitle);
+      //write function to create README File in .dist
     
     const writeReadme = content =>{
             return new Promise((resolve, reject) => {
@@ -282,35 +280,3 @@ or you can also find me on GitHub.com my username is ${gitUsername} Please visit
         writeReadme(createdocument(items));
 
 })
-
-
-
-
-
-
-
-// TODO: Create a function to write README file
-// const writeReadme = content =>{
-//     return new Promise((resolve, reject) => {
-//         fs.writeFile( './.dist/readme.md',  function (err) {
-//             if (err) {
-//                 reject(err);
-//                 return;
-//             }
-
-//             resolve({ ok: true, message: 'File Created!'});
-
-            
-//         });
-//     });
-    
-// };
-
-
-
-// TODO: Create a function to initialize app
-//function init() {}
-
-// Function call to initialize app
-//init();
-

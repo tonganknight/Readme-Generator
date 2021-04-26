@@ -34,23 +34,48 @@
 const createdocument = inputtitle => {
    
   return`
-   ${title}  
-   ========
-   ${licence}
-   Created by ${contributors}
-   =========================================================================================
-   Description
-   ============
-   ${description}
+  # ${title}   ${licensebadge}                       
   
-   Installation Instructions 
-   ==========================
-   ${installation}
-
-
-
-
-`};
+  ## Description
+  
+  ${description}
+  
+  ## Table of Contents
+  * [Installation](#installation)
+  * [Usage](#usage)
+  * [Credits](#credits)
+  * [License](#license)
+           
+  ## installation 
+  
+  ${installation}
+  
+  ## Usage
+  
+  ${usage}
+  
+  ## Features
+  
+  ${features}
+  
+  ## Testing 
+  
+  ${test}
+  
+  ## Credits
+  
+  ${contributors}
+  
+  ## License:
+  
+  For more information on the Licence on this Project visit ${licenseinfo}
+  
+  ## Questions 
+  
+  If you have any questions about this project, or if you run into any issues please contact me at ${email}
+  or you can also find me on GitHub.com my username is ${gitUsername} Please visit my profile page at ${gitProfile}
+  
+  `};
 
 module.exports = {
   createdocument: createdocument
