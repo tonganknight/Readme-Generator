@@ -201,11 +201,12 @@ promptUser().then(answers =>{
         var licenseinfo = "https://choosealicense.com/licenses/lgpl-3.0/"
      }
      if(license == "BSD"){
-        var licenseinfo ="![BSD]https://github.com/tonganknight/Readme-Generator/blob/master/assets/images/License-BSD-orange.svg"
+        var licensebadge ="![BSD]https://github.com/tonganknight/Readme-Generator/blob/master/assets/images/License-BSD-orange.svg"
         var licenseinfo = "https://whatis.techtarget.com/definition/BSD-licenses"
      }
      if(license == 'ISC'){
-         var licenseinfo ="![ISC]"
+         var licensebadge ="![ISC]https://github.com/tonganknight/Readme-Generator/blob/master/assets/images/License-ISC-green.svg"
+         var licenseinfo = "https://opensource.org/licenses/ISC"
      }
 
     var gitUsername = answers.gitUsername;
